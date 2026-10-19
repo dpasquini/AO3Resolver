@@ -1,0 +1,7 @@
+---
+relationships-retrieval:
+  endpoint: "http://194.171.203.17:8890/sparql/"
+  query: "PREFIX golem: <https://golemlab.eu/graph/> SELECT ?series_url ?story_id ?story_url ?relationship ?character WHERE { { SELECT ?story ?relationship WHERE { ?story golem:socialRelationships ?relationship .} } ?story golem:story_url ?story_url . ?story golem:series_url ?series_url . OPTIONAL { ?story golem:story_id ?story_id . } OPTIONAL { ?story golem:characters ?character . } }"
+  return_format: "json"
+  compute_stats: '/Users/danielepasquini/Develop/AO3Resolver/relationships_stats.json'
+  save_intermediate_results: '/Users/danielepasquini/Develop/AO3Resolver/relationships.json'
