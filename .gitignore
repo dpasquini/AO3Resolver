@@ -56,6 +56,7 @@ env/
 
 venv/
 ENV/
+/ao3/
 .pytest_cache/
 .coverage
 htmlcov/
